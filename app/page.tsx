@@ -10,7 +10,7 @@ import { IAd } from "./types/types";
 export default function Home() {
   //const notify = () => toast("Wow so easy!");
   const [ads, setAds] = useState<IAd[]>([]);
-  const socket = io('http://localhost:5000');
+  const socket = io('https://hw3-server-9wij.onrender.com');
 
   useEffect(() => {
     socket.on('newAd', (ad: IAd) => {
